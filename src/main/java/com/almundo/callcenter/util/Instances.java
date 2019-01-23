@@ -34,7 +34,7 @@ public class Instances {
 
     private static synchronized Integer getCountEmployees() {
         if (countEmployees == null) {
-            countEmployees = new Integer(0);
+            countEmployees = Integer.valueOf(0);
         }
         return countEmployees;
     }
@@ -104,6 +104,7 @@ public class Instances {
     public static Employee callWaiting() {
         Employee employee;
         while (!isFreeEmployees()) {
+            // This while is used for wait fremoon the employee
         }
         employee = getEmployeeWaiting();
         if (employee == null) {
